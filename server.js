@@ -10,11 +10,9 @@ const app = express();
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "/Develop/public")));
+app.use(express.static(path.join(__dirname, "/public")));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://Amalyn21:Mylove21@cluster0.8g29p.mongodb.net/workoutDB?retryWrites=true&w=majority", { useNewUrlParser: true });
-
-const db = require("./Develop/models");
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
