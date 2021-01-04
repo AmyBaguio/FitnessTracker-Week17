@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, "/Develop/public")));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://Amalyn21:Mylove21@cluster0.8g29p.mongodb.net/workoutDB?retryWrites=true&w=majority", { useNewUrlParser: true });
 
-const db = require("./models");
+const db = require("./Develop/models");
 
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
