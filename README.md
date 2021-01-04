@@ -35,7 +35,7 @@ To deploy an application with a MongoDB database to Heroku, you'll need to set u
 
 <br>
 
-![App Screenshot](https://raw.githubusercontent.com/AmyBaguio/Updated-Portfolio2/master/Assets/ResponsivePortfolio%20.png)
+![App Screenshot](/Screenshot.png)
 
 <br>
 

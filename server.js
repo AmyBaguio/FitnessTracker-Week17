@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const PORT = process.env.PORT || 3000;
 
@@ -9,9 +10,9 @@ const app = express();
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "/Develop/public")));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://Amalyn21:Mylove21*@cluster0.8g29p.mongodb.net/workoutDB?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://Amalyn21:Mylove21@cluster0.8g29p.mongodb.net/workoutDB?retryWrites=true&w=majority", { useNewUrlParser: true });
 
 const db = require("./models");
 
